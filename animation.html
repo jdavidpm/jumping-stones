@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=10">
+	<title>Jumping Stones</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+	<script type="text/javascript">
+		document.body.style.transform = "scale(0.62)";
+		document.body.style.transformOrigin = "0 0";
+		document.body.style.width = '1700px';
+	</script>
+	<div class="dpAnimated">
+		<div class="sliderHolder">
+			<a name="downToAnimation"></a>
+			<a name="initArr"></a>
+			<div class="rangeSlider">
+				<h3>Stones</h3>
+				<input class="rangeSlider__range" type="range" value="1" min="1" max="10" id="rangeStones">
+				<span id="valueStones" class="rangeSlider__value">0</span>
+			</div>
+			<div class="rangeSlider">
+				<h3>Jumps</h3>
+				<input class="rangeSlider__range" type="range" value="1" min="1" max="10" id="rangeJumps">
+				<span id = "valueJumps" class="rangeSlider__value">0</span>
+			</div>
+			<div class="rangeSlider">
+				<h3>Speed</h3>
+				<input class="rangeSlider__range" type="range" value="1" min="1" max="10" id="rangeSpeed">
+				<span id = "valueSpeed" class="rangeSlider__value">0</span>
+			</div><br><br><br>
+			<h3 id="totalTries">Total: </h3>
+		</div>
+		<div class="code" width="100" height="600">
+			<h1><a href="code/Escalera.c" title="Descarga el código completo">Code in C</a></h1><br><br><br>
+			<h2>unsigned long long jumps(int E)<br>{<br>
+				&nbsp&nbsp&nbspint i;<br><br>
+				&nbsp&nbsp&nbspif (E == N) return 1;<br>
+				&nbsp&nbsp&nbspif (E > N) return 0;<br>
+				&nbsp&nbsp&nbspif (DP[E] != -1) return DP[E];<br><br>
+				&nbsp&nbsp&nbspDP[E] = 0;<br>
+				&nbsp&nbsp&nbspfor (i = 1; i <= k; ++i)<br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDP[E] += jumps(E + i);<br><br>
+				&nbsp&nbsp&nbspreturn DP[E];<br>}
+			</h2>
+			<h2>int main(void)<br>{<br>
+				&nbsp&nbsp&nbspmemset(DP, -1, sizeof(DP));<br>
+				&nbsp&nbsp&nbspscanf("%d %d", &N, &k);<br>
+				&nbsp&nbsp&nbspprintf("%llu\n", jumps(0));<br><br>
+				&nbsp&nbsp&nbspreturn 0;<br>}
+			</h2>
+		</div>
+		<div class="buttons-holder">
+			<button onclick="createArray()" class="button" role="button">Create</button>
+			<button onclick="initArray()" class="button" role="button">Start</button>
+			<button onclick="removeElements()" class="button" role="button">Delete</button>
+			<button onclick="changeStepByStep()" class="button" role="button">By Step</button>
+			<button onclick="changeAll()" class="button" role="button">All at Once</button>
+			<a href="index.html" class="button" role="button">Return</a>
+		</div>
+		<div class="ball"></div>
+		<a name="onlyAnimation"></a>
+		<div id="animeAction">
+			<svg id="river" width="1300" height="200">
+				<path id="frog" d="" stroke="none" stroke-width="4" fill="none"/>
+			</svg>
+		</div>	
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+	<script src="js/index.js"></script>
+	<script src="js/menu.js"></script>
+</body>
+</html>

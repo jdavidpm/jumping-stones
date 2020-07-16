@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=10">
+	<title>Jumping Stones</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id='menu'>
+		<ul>
+			<li><a href='index.html'>Home</a></li>
+			<li class='active'><a href='problem.html'>Problem</a></li>
+		</ul>
+	</div>
+	<h1 class="home-title">
+		<span>Problem</span>
+	</h1>
+	<h3 class="home-title">
+		<span><p><a href="#" class="underlined underlined--thick">
+			A frog wants to cross the rivers but doesn't want to get wet. There is a path made out of <b>N stones</b> that leads to the other side.
+			In order to move from one stone to another, the frog has to jump, and in each jump the frog can move from 1 to k stones. <br>
+			In how many ways can the frog cross the river?
+		</a></p></span>
+	</h3>
+	<h2 class="home-title">
+		<span>Example:</span>
+	</h2>
+	<h3 class="home-title">
+		<span><p><a href="#" class="underlined underlined--thick">
+			If the path had 4 stones, and k equals to 3, the frog could cross the river in 7 different jumps sequences:<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [1, 1, 1, 1]<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [1, 1, 2]<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [1, 2, 1]<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [2, 1, 1]<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [2, 2]<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [1, 3]<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp [3, 1]
+		</a></p></span>
+	</h3>
+	<h1 class="home-title">
+		<span>How is this problem solved?</span>
+	</h1>
+	<h2 class="home-title">
+		<span>Dynamic Programming</span>
+	</h2>
+	<h3 class="home-title">
+		<span><p><a href="#" class="underlined underlined--thick">
+			PD is a technique that helps us reduce running time of an algorithm assuming that the problem has superimposed problems and optimal substructures.<br><br>
+			This technique has two different approaches:<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp Top-down<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp·&nbsp Bottom-Up<br>
+		</a></p></span>
+	</h3>
+	<h3 class="home-title">
+		<span><p><a href="#" class="underlined underlined--thick">
+			Without Dynamic Programming, the previous problems can be solved by using an simple recursive function, and with the earlier example, that function can generate the following calling tree:<br><br>
+		</a></p></span>
+	</h3>
+	</div>
+	<div class="imageHolder">
+		<a href="recursionTree.jpg" title="Abrir Imagen" target="_blank"><img src="recursionTree.jpg" alt="Árbol de Recursión"/></a>
+	</div>
+	<script src="js/anime.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/menu.js"></script>
+</body>
+</html>
